@@ -1,6 +1,15 @@
 # Cybersecurity Data Analysis Project
 
+[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://python.org)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org)
+[![Pandas](https://img.shields.io/badge/Pandas-2.1.0-green.svg)](https://pandas.pydata.org)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A comprehensive data analysis project examining global cybersecurity threats from 2015-2024, providing insights into attack patterns, industry impacts, and security trends.
+
+## 🏷️ Topics
+
+`cybersecurity` `data-analysis` `python` `jupyter` `pandas` `matplotlib` `seaborn` `plotly` `threat-intelligence` `security-analytics` `data-science` `visualization` `statistical-analysis` `business-intelligence`
 
 ## 📊 Project Overview
 
@@ -11,6 +20,21 @@ This project analyzes a dataset of 3,000 cybersecurity incidents to understand:
 - **Financial impact** and affected user analysis
 - **Attack source attribution** and threat intelligence
 - **Resolution time** analysis and security effectiveness
+
+## 🔍 Research Question
+
+**Primary Research Question:**
+
+> "What are the key patterns, trends, and impacts of cybersecurity threats from 2015-2024, and how do they vary across industries, attack types, and geographical regions?"
+
+**Key Sub-Questions:**
+
+- How have cybersecurity threats evolved over the 10-year period?
+- Which industries are most vulnerable to cyber attacks?
+- What are the most common attack types and their characteristics?
+- What is the relationship between attack types and financial losses?
+- How do attack sources and targets vary by region?
+- What factors influence incident resolution times?
 
 ## 🗂️ Project Structure
 
@@ -134,10 +158,11 @@ cybersecurity_project/
 
 ## 📊 Dataset Information
 
-- **Source**: Global Cybersecurity Threats Dataset
+- **Source**: Global Cybersecurity Threats Dataset (Synthetic dataset for educational purposes)
 - **Time Period**: 2015-2024
 - **Records**: 3,000 cybersecurity incidents
 - **Features**: 10 columns covering attack characteristics, targets, impacts, and responses
+- **Note**: This is a synthetic dataset created for educational and analytical purposes
 - **Quality**: Complete dataset with no missing values
 
 ## 🎨 Visualization Features
