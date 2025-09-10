@@ -1,161 +1,183 @@
-# Cybersecurity Toolkit
+# Cybersecurity Data Analysis Project
 
-A comprehensive Python-based cybersecurity toolkit providing essential tools for network scanning, log analysis, and file encryption.
+A comprehensive data analysis project examining global cybersecurity threats from 2015-2024, providing insights into attack patterns, industry impacts, and security trends.
 
-## Features
+## 📊 Project Overview
 
-### 🔍 Network Scanning
+This project analyzes a dataset of 3,000 cybersecurity incidents to understand:
 
-- Port scanning (single and multiple hosts)
-- Host discovery on local networks
-- Service detection and version identification
-- Basic vulnerability scanning
-- Export scan results to various formats
+- **Attack patterns and trends** over time
+- **Industry targeting** and vulnerability patterns
+- **Financial impact** and affected user analysis
+- **Attack source attribution** and threat intelligence
+- **Resolution time** analysis and security effectiveness
 
-### 📊 Log Analysis
-
-- Parse and analyze system logs
-- Detect suspicious activities and patterns
-- Real-time log monitoring
-- Generate comprehensive security reports
-- Support for multiple log formats
-
-### 🔐 File Encryption
-
-- AES encryption for files and directories
-- Secure key generation and management
-- Password-protected encryption keys
-- Secure file deletion
-- Batch encryption/decryption operations
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-cd cybersecurity_project
-```
-
-2. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the toolkit:
-
-```bash
-python cybersecurity_toolkit.py
-```
-
-## Usage
-
-### Main Menu
-
-The toolkit provides a user-friendly menu system with the following options:
-
-1. **Network Scanning** - Scan networks and hosts for open ports and services
-2. **Log Analysis** - Analyze log files for security threats and patterns
-3. **File Encryption** - Encrypt/decrypt files and manage encryption keys
-4. **Help & Documentation** - View detailed help and expansion guidelines
-5. **Exit** - Close the application
-
-### Network Scanning Module
-
-- **Port Scan (Single Host)**: Scan a single target for open ports
-- **Port Scan (Multiple Hosts)**: Scan multiple targets simultaneously
-- **Host Discovery**: Discover live hosts on a network
-- **Service Detection**: Identify services running on open ports
-- **Vulnerability Scan**: Basic vulnerability assessment
-- **View/Export Results**: Review and export scan results
-
-### Log Analysis Module
-
-- **Load Log File**: Load log files for analysis
-- **Parse System Logs**: Parse various log formats
-- **Detect Suspicious Activities**: Identify potential security threats
-- **Search for Patterns**: Search logs using regex patterns
-- **Generate Security Report**: Create comprehensive security reports
-- **Real-time Monitoring**: Monitor logs in real-time
-- **Export Results**: Export analysis results
-
-### File Encryption Module
-
-- **Generate New Key**: Create new encryption keys
-- **Load Existing Key**: Load previously generated keys
-- **Encrypt File**: Encrypt individual files
-- **Decrypt File**: Decrypt encrypted files
-- **Encrypt Directory**: Encrypt entire directories
-- **Decrypt Directory**: Decrypt entire directories
-- **Secure File Deletion**: Permanently delete files
-- **Key Management**: Manage encryption keys
-
-## Project Structure
+## 🗂️ Project Structure
 
 ```
 cybersecurity_project/
-├── cybersecurity_toolkit.py    # Main application entry point
-├── modules/                     # Module directory
-│   ├── __init__.py
-│   ├── network_scanner.py      # Network scanning functionality
-│   ├── log_analyzer.py         # Log analysis functionality
-│   └── file_encryptor.py       # File encryption functionality
-├── requirements.txt            # Python dependencies
-└── README.md                   # This file
+├── data/
+│   └── Global_Cybersecurity_Threats_2015-2024.csv    # Dataset (3,000 incidents)
+├── notebooks/
+│   └── 01_data_cleaning.ipynb                        # Complete analysis notebook
+├── README.md                                          # This file
+└── requirements.txt                                   # Python dependencies
 ```
 
-## Expansion Guidelines
+## 📈 Analysis Features
 
-### Adding New Features
+### **Step 0: Import Libraries**
 
-Each module is designed to be easily extensible:
+- Professional library setup with error handling
+- Optimized visualization parameters
 
-1. **Network Scanner**: Add new scanning techniques, vulnerability checks, or output formats
-2. **Log Analyzer**: Add new log parsers, detection rules, or analysis algorithms
-3. **File Encryptor**: Add new encryption algorithms, key management features, or security enhancements
+### **Step 1: Load Dataset**
 
-### Development Best Practices
+- Data loading with comprehensive error handling
+- Dataset overview and quality assessment
 
-- Follow the existing code structure and patterns
-- Add comprehensive error handling
-- Include user input validation
-- Update help documentation when adding features
-- Test thoroughly before deployment
+### **Step 2: Inspect Dataset**
 
-### Security Considerations
+- Data types and structure analysis
+- Missing values assessment
+- Statistical summary with additional metrics
 
-- Always validate user inputs
-- Use secure random number generation for keys
-- Implement proper error handling to avoid information disclosure
-- Follow principle of least privilege
-- Regular security audits and updates
+### **Step 3: Data Cleaning & Preparation**
 
-## Dependencies
+- Column name standardization
+- Duplicate detection and removal
+- Data type optimization for memory efficiency
 
-- Python 3.7+
-- cryptography (for encryption)
-- scapy (for network scanning)
-- watchdog (for file monitoring)
-- pandas (for data analysis)
-- Additional dependencies listed in requirements.txt
+### **Step 4: Exploratory Data Analysis (EDA)**
 
-## Contributing
+- **4A**: Summary statistics (numeric & categorical)
+- **4B**: Distribution visualizations (histograms & count plots)
+- **4C**: Correlation matrix analysis
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+### **Step 5: Trend Analysis Over Years**
 
-## License
+- Attack volume trends (2015-2024)
+- Financial loss patterns by year
+- Affected users analysis
+- Top attack types evolution
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### **Step 6: Advanced Analysis & Insights**
 
-## Disclaimer
+- Most targeted industries analysis
+- Financial loss vs. affected users correlation
+- Incident resolution time by attack type
+- Attack source vs. target industry heatmap
 
-This toolkit is for educational and authorized security testing purposes only. Users are responsible for ensuring they have proper authorization before using these tools on any network or system.
+### **Step 7: Conclusions & Recommendations**
 
-## Support
+- Key findings and actionable insights
+- Industry-specific recommendations
+- Attack type prioritization strategies
+- Resolution time optimization
+- Trend monitoring and preparation
 
-For questions, issues, or contributions, please open an issue on the project repository.
+## 🎯 Key Findings
+
+### **Most Targeted Industries:**
+
+1. **IT Sector** (478 attacks) - Critical infrastructure
+2. **Banking** (445 attacks) - High financial value
+3. **Healthcare** (429 attacks) - Medical records
+4. **Retail** (423 attacks) - Payment data
+5. **Education** (419 attacks) - Research data
+
+### **Most Common Attack Types:**
+
+1. **DDoS** (531 incidents) - Availability threats
+2. **Phishing** (529 incidents) - Social engineering
+3. **SQL Injection** (503 incidents) - Application vulnerabilities
+4. **Ransomware** (493 incidents) - Data encryption
+5. **Malware** (485 incidents) - Malicious software
+
+### **Attack Sources:**
+
+1. **Nation-state** (794 incidents) - State-sponsored
+2. **Unknown** (768 incidents) - Attribution challenges
+3. **Insider** (752 incidents) - Internal threats
+4. **Hacker Groups** (686 incidents) - Organized crime
+
+## 🛠️ Technical Requirements
+
+- **Python 3.7+**
+- **Jupyter Notebook**
+- **Required Libraries**: pandas, numpy, matplotlib, seaborn
+
+## 📦 Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository-url>
+   cd cybersecurity_project
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Launch Jupyter Notebook:**
+
+   ```bash
+   jupyter notebook
+   ```
+
+4. **Open the analysis:**
+   - Navigate to `notebooks/01_data_cleaning.ipynb`
+   - Run all cells to reproduce the analysis
+
+## 📊 Dataset Information
+
+- **Source**: Global Cybersecurity Threats Dataset
+- **Time Period**: 2015-2024
+- **Records**: 3,000 cybersecurity incidents
+- **Features**: 10 columns covering attack characteristics, targets, impacts, and responses
+- **Quality**: Complete dataset with no missing values
+
+## 🎨 Visualization Features
+
+- **Professional styling** with consistent color schemes
+- **Comprehensive titles and labels** for all plots
+- **Multiple chart types**: histograms, bar charts, line plots, scatter plots, heatmaps
+- **Statistical annotations** and correlation matrices
+- **Trend analysis** with temporal visualizations
+
+## 📋 Analysis Methodology
+
+1. **Data Quality Assessment** - Comprehensive inspection and cleaning
+2. **Exploratory Analysis** - Statistical summaries and distributions
+3. **Trend Analysis** - Temporal patterns and evolution
+4. **Advanced Analytics** - Correlation and relationship analysis
+5. **Insight Generation** - Actionable recommendations and findings
+
+## 🎯 Target Audience
+
+- **Cybersecurity Professionals** - Understanding threat landscapes
+- **Risk Managers** - Quantifying security risks and impacts
+- **Data Analysts** - Learning cybersecurity data analysis techniques
+- **Security Leadership** - Strategic planning and resource allocation
+- **Students** - Educational cybersecurity analysis project
+
+## 📈 Business Value
+
+- **Risk Assessment** - Identify high-risk industries and attack patterns
+- **Resource Planning** - Optimize security investments based on data
+- **Threat Intelligence** - Understand evolving attack methodologies
+- **Strategic Planning** - Data-driven security strategy development
+
+## 🔍 Future Enhancements
+
+- **Real-time Analysis** - Live threat monitoring capabilities
+- **Predictive Modeling** - Machine learning for threat prediction
+- **Geographic Analysis** - Regional threat pattern analysis
+- **Industry Benchmarking** - Comparative security posture analysis
+
+---
+
+**Note**: This is a focused data analysis project designed to provide comprehensive insights into cybersecurity threat patterns and trends. The analysis is based on historical data and provides actionable recommendations for improving cybersecurity posture.
