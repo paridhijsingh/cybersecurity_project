@@ -9,6 +9,7 @@ import os
 from modules.network_scanner import NetworkScanner
 from modules.log_analyzer import LogAnalyzer
 from modules.file_encryptor import FileEncryptor
+from modules.threat_analyzer import ThreatAnalyzer
 
 
 class CybersecurityToolkit:
@@ -19,6 +20,7 @@ class CybersecurityToolkit:
         self.network_scanner = NetworkScanner()
         self.log_analyzer = LogAnalyzer()
         self.file_encryptor = FileEncryptor()
+        self.threat_analyzer = ThreatAnalyzer()
         self.running = True
     
     def display_menu(self):
@@ -29,22 +31,23 @@ class CybersecurityToolkit:
         print("1. Network Scanning")
         print("2. Log Analysis")
         print("3. File Encryption/Decryption")
-        print("4. Help & Documentation")
-        print("5. Exit")
+        print("4. Threat Intelligence Analysis")
+        print("5. Help & Documentation")
+        print("6. Exit")
         print("="*60)
     
     def get_user_choice(self):
         """Get user's menu choice with input validation."""
         while True:
             try:
-                choice = input("\nEnter your choice (1-5): ").strip()
-                if choice in ['1', '2', '3', '4', '5']:
+                choice = input("\nEnter your choice (1-6): ").strip()
+                if choice in ['1', '2', '3', '4', '5', '6']:
                     return int(choice)
                 else:
-                    print("Invalid choice. Please enter a number between 1-5.")
+                    print("Invalid choice. Please enter a number between 1-6.")
             except KeyboardInterrupt:
                 print("\n\nExiting...")
-                return 5
+                return 6
             except Exception as e:
                 print(f"Error: {e}. Please try again.")
     
@@ -68,6 +71,13 @@ class CybersecurityToolkit:
         print("FILE ENCRYPTION MODULE")
         print("-"*50)
         self.file_encryptor.run()
+    
+    def run_threat_analysis(self):
+        """Run the threat intelligence analysis module."""
+        print("\n" + "-"*50)
+        print("THREAT INTELLIGENCE ANALYSIS MODULE")
+        print("-"*50)
+        self.threat_analyzer.run()
     
     def show_help(self):
         """Display help and documentation."""
@@ -94,6 +104,14 @@ CYBERSECURITY TOOLKIT - MODULE DESCRIPTIONS:
    - Decrypt files with proper authentication
    - Generate and manage encryption keys
    - Secure file deletion
+
+4. THREAT INTELLIGENCE ANALYSIS:
+   - Analyze cybersecurity threat datasets
+   - Geographic and industry impact analysis
+   - Temporal trend identification
+   - Financial impact assessment
+   - Vulnerability and defense effectiveness analysis
+   - Generate comprehensive threat intelligence reports
 
 EXPANSION GUIDELINES:
 - Each module is designed to be easily extensible
@@ -125,8 +143,10 @@ REQUIREMENTS:
                 elif choice == 3:
                     self.run_file_encryption()
                 elif choice == 4:
-                    self.show_help()
+                    self.run_threat_analysis()
                 elif choice == 5:
+                    self.show_help()
+                elif choice == 6:
                     print("\nThank you for using the Cybersecurity Toolkit!")
                     self.running = False
                 
